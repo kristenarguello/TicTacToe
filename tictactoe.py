@@ -8,7 +8,7 @@ def simb1():
         if simbolo == 'X' or simbolo == 'O':
             valido = True
     return simbolo
-
+    
 #exibir grade
 def grade(jogo):
     print('   |   |   ')
@@ -115,7 +115,7 @@ while reinicia:
         while not foi:
             pos = posicao()
             foi = alcance(pos)
-        while not vazio(pos,usados):
+        while not vazio(pos,usados) or not alcance(pos):
             pos = posicao()
         usados.append(pos)
 
